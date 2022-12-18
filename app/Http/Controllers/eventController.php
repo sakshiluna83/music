@@ -47,7 +47,6 @@ class eventController extends Controller
         $data['genres'] = @json_decode($genres, true);
         $data['date'] = @json_decode($date, true);
         $data['venue'] = @json_decode($venue, true);
-
         return view('events', compact('events', 'data'));
     }
     public function listEvents(Request $request)

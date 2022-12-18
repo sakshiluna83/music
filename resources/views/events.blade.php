@@ -130,16 +130,12 @@
 
                 </select>
                 <select name="venue">
-                    <option value="">Venue</option>
+                    <option name="venue" value="">Venue</option>
 
-                    @forelse($data['venue'] as $venue)
+                    @foreach($data['venue'] as $venue)
 
-                    <option name="venue" value="$venue['venue']">{{$venue['venue'] }}</option>
-                    @empty
-                    <tr>
-                        <td colspan="3">No event of this artist.</td>
-                    </tr>
-                    @endforelse
+                    <option name="venue" value="{{$venue['venue']}}">{{ $venue['venue'] }}</option>
+                    @endforeach
 
                 </select>
                 <button type="submit">Filter Results</button>
